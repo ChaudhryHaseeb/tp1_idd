@@ -3,8 +3,13 @@ public class Main
     public static void main(String[] args)
     {
         System.out.println("Test");
-        //ExtracteurMysql ms = new ExtracteurMysql();
-        //ms.makeJDBCConnection();
-        ExtracteurExcel excel = new ExtracteurExcel();
+        ExtracteurMysql.makeJDBCConnection();
+        //ExtracteurMysql.req1Rock();
+        //ExtracteurMysql.req1NonRock();
+        ExtracteurMysql ex = new ExtracteurMysql();
+        for(Object i : ex.req1RockMysql())
+        {
+            System.out.println(i);
+        }
     }
 }
