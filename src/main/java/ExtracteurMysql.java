@@ -11,7 +11,12 @@ class ExtracteurMysql
     static PreparedStatement prestmt = null;
     ResultSet rs;
 
-    public static void makeJDBCConnection()
+    public ExtracteurMysql()
+    {
+        this.makeJDBCConnection();
+    }
+
+    private void makeJDBCConnection()
     {
         try
         {
